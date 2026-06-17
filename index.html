@@ -1,0 +1,145 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.w{padding:1rem 0}
+.tabs{display:flex;gap:6px;margin-bottom:1.25rem;flex-wrap:wrap}
+button{font-size:12px;font-weight:500;padding:5px 14px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-secondary);cursor:pointer}
+button.on{background:var(--color-background-secondary);color:var(--color-text-primary);border-color:var(--color-border-primary)}
+.sem{display:none}.sem.show{display:block}
+.meta{font-size:12px;color:var(--color-text-secondary);margin-bottom:10px}
+.grid{display:grid;grid-template-columns:54px repeat(5,minmax(0,1fr));gap:4px}
+.hd{font-size:11px;font-weight:500;color:var(--color-text-secondary);text-align:center;padding:3px 0}
+.tc{font-size:10px;color:var(--color-text-tertiary);font-weight:500;display:flex;align-items:center;justify-content:center}
+.c{border-radius:var(--border-radius-md);padding:7px 6px;min-height:66px;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.e{border:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary);min-height:66px;border-radius:var(--border-radius-md)}
+.cd{font-size:9px;font-weight:500;font-family:var(--font-mono)}
+.cn{font-size:10px;line-height:1.3}
+.ce{font-size:9px}
+.lg{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;padding-top:8px;border-top:0.5px solid var(--color-border-tertiary)}
+.li{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--color-text-secondary)}
+.ld{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.note{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem}
+.nt{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px}
+.nb{font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+
+.ob{background:#E1F5EE;border:0.5px solid #9FE1CB}.ob .cd{color:#085041}.ob .cn{color:#0F6E56}.ob .ce{color:#1D9E75}
+.ti{background:#EEEDFE;border:0.5px solid #AFA9EC}.ti .cd{color:#26215C}.ti .cn{color:#3C3489}.ti .ce{color:#534AB7}
+.im{background:#E6F1FB;border:0.5px solid #85B7EB}.im .cd{color:#042C53}.im .cn{color:#185FA5}.im .ce{color:#378ADD}
+.ai{background:#FAEEDA;border:0.5px solid #FAC775}.ai .cd{color:#412402}.ai .cn{color:#633806}.ai .ce{color:#854F0B}
+.cl{background:#FAECE7;border:0.5px solid #F0997B}.cl .cd{color:#4A1B0C}.cl .cn{color:#712B13}.cl .ce{color:#993C1D}
+
+@media(prefers-color-scheme:dark){
+.ob{background:#085041;border-color:#0F6E56}.ob .cd,.ob .cn{color:#9FE1CB}.ob .ce{color:#5DCAA5}
+.ti{background:#26215C;border-color:#534AB7}.ti .cd,.ti .cn{color:#CECBF6}.ti .ce{color:#AFA9EC}
+.im{background:#042C53;border-color:#185FA5}.im .cd,.im .cn{color:#B5D4F4}.im .ce{color:#85B7EB}
+.ai{background:#412402;border-color:#BA7517}.ai .cd,.ai .cn{color:#FAC775}.ai .ce{color:#EF9F27}
+.cl{background:#4A1B0C;border-color:#D85A30}.cl .cd,.cl .cn{color:#F5C4B3}.cl .ce{color:#F0997B}
+}
+</style>
+
+<h2 class="sr-only">Orario settimanale del master biennale DTU 2026-2028, selezionabile per semestre</h2>
+
+<div class="w">
+<div class="tabs">
+  <button class="on" onclick="st('a26',this)">Autunno 2026</button>
+  <button onclick="st('jan',this)">Gennaio 2027</button>
+  <button onclick="st('s27',this)">Primavera 2027</button>
+  <button onclick="st('a27',this)">Autunno 2027</button>
+  <button onclick="st('tesi',this)">Primavera 2028</button>
+</div>
+
+<div class="sem show" id="tab-a26">
+<p class="meta">30 ECTS · Mar e Mer liberi per studio autonomo</p>
+<div class="grid">
+<div class="hd"></div><div class="hd">Lun</div><div class="hd">Mar</div><div class="hd">Mer</div><div class="hd">Gio</div><div class="hd">Ven</div>
+<div class="tc">8–12</div>
+<div class="c ob"><span class="cd">KU101</span><span class="cn">Pathophysiology</span><span class="ce">10 ECTS · E1</span></div>
+<div class="e"></div>
+<div class="e"></div>
+<div class="c im"><span class="cd">22485</span><span class="cn">Medical Imaging Systems</span><span class="ce">10 ECTS · E2</span></div>
+<div class="c ob"><span class="cd">22449</span><span class="cn">Product Development</span><span class="ce">5 ECTS · E4B</span></div>
+<div class="tc">13–17</div>
+<div class="c im"><span class="cd">22485</span><span class="cn">Medical Imaging Systems</span><span class="ce">10 ECTS · E2</span></div>
+<div class="e"></div>
+<div class="e"></div>
+<div class="c ob"><span class="cd">KU101</span><span class="cn">Pathophysiology</span><span class="ce">10 ECTS · E1</span></div>
+<div class="c ob"><span class="cd">12106</span><span class="cn">Sustainability</span><span class="ce">5 ECTS · E3B</span></div>
+</div>
+<div class="lg">
+<span class="li"><span class="ld" style="background:#1D9E75"></span>Obbligatorio</span>
+<span class="li"><span class="ld" style="background:#378ADD"></span>Imaging</span>
+</div>
+</div>
+
+<div class="sem" id="tab-jan">
+<div class="note">
+<p class="nt">42500 — Innovation in Engineering · 5 ECTS</p>
+<p class="nb">Corso intensivo di circa 3 settimane a gennaio. Non interferisce con i semestri regolari. Orario pubblicato su Study Planner a settembre 2026.</p>
+</div>
+</div>
+
+<div class="sem" id="tab-s27">
+<p class="meta">30 ECTS · I 3 corsi di tissue engineering in parallelo · Gio mattina e Ven mattina liberi</p>
+<div class="grid">
+<div class="hd"></div><div class="hd">Lun</div><div class="hd">Mar</div><div class="hd">Mer</div><div class="hd">Gio</div><div class="hd">Ven</div>
+<div class="tc">8–12</div>
+<div class="c ob"><span class="cd">02409</span><span class="cn">Multivariate Statistics</span><span class="ce">5 ECTS · F1A</span></div>
+<div class="c ai"><span class="cd">02180</span><span class="cn">Intro to AI</span><span class="ce">5 ECTS · F3A</span></div>
+<div class="c ti"><span class="cd">22212</span><span class="cn">Stem Cell Technology</span><span class="ce">5 ECTS · F5A</span></div>
+<div class="e"></div>
+<div class="e"></div>
+<div class="tc">13–17</div>
+<div class="e"></div>
+<div class="c ti"><span class="cd">22284</span><span class="cn">Living Models of Organs</span><span class="ce">5 ECTS · F4A</span></div>
+<div class="e"></div>
+<div class="c im"><span class="cd">22506</span><span class="cn">Medical MRI</span><span class="ce">5 ECTS · F1B</span></div>
+<div class="c ti"><span class="cd">22281</span><span class="cn">Biomaterials</span><span class="ce">5 ECTS · F3B</span></div>
+</div>
+<div class="lg">
+<span class="li"><span class="ld" style="background:#1D9E75"></span>Obbligatorio</span>
+<span class="li"><span class="ld" style="background:#534AB7"></span>Tissue engineering</span>
+<span class="li"><span class="ld" style="background:#378ADD"></span>Imaging</span>
+<span class="li"><span class="ld" style="background:#EF9F27"></span>AI</span>
+</div>
+</div>
+
+<div class="sem" id="tab-a27">
+<p class="meta">30 ECTS · Tutti i prerequisiti soddisfatti · KU105 occupa l'intera giornata di Mer</p>
+<div class="grid" style="grid-template-rows:auto auto auto">
+<div class="hd"></div><div class="hd">Lun</div><div class="hd">Mar</div><div class="hd">Mer</div><div class="hd">Gio</div><div class="hd">Ven</div>
+<div class="tc" style="grid-row:2;grid-column:1">8–12</div>
+<div class="e" style="grid-row:2;grid-column:2"></div>
+<div class="e" style="grid-row:2;grid-column:3"></div>
+<div class="c ti" style="grid-row:2/4;grid-column:4;min-height:140px;justify-content:flex-start;padding-top:12px"><span class="cd">KU105</span><span class="cn">Adv. Physiological Modelling</span><span class="ce" style="margin-top:4px">10 ECTS · E5</span><span class="ce">Giornata intera 8–17</span></div>
+<div class="c im" style="grid-row:2;grid-column:5"><span class="cd">22507</span><span class="cn">Advanced MRI</span><span class="ce">5 ECTS · E2B</span></div>
+<div class="e" style="grid-row:2;grid-column:6"></div>
+<div class="tc" style="grid-row:3;grid-column:1">13–17</div>
+<div class="c ai" style="grid-row:3;grid-column:2"><span class="cd">02456</span><span class="cn">Deep Learning</span><span class="ce">5 ECTS · E2A</span></div>
+<div class="c im" style="grid-row:3;grid-column:3"><span class="cd">22525</span><span class="cn">Medical Image Analysis</span><span class="ce">5 ECTS · E4A</span></div>
+<div class="c cl" style="grid-row:3;grid-column:5"><span class="cd">63870</span><span class="cn">Needfinding at Hospital</span><span class="ce">5 ECTS · E1B</span></div>
+<div class="e" style="grid-row:3;grid-column:6"></div>
+</div>
+<div class="lg">
+<span class="li"><span class="ld" style="background:#534AB7"></span>Tissue eng. / modelling</span>
+<span class="li"><span class="ld" style="background:#378ADD"></span>Imaging</span>
+<span class="li"><span class="ld" style="background:#EF9F27"></span>AI</span>
+<span class="li"><span class="ld" style="background:#D85A30"></span>Clinico</span>
+</div>
+</div>
+
+<div class="sem" id="tab-tesi">
+<div class="note">
+<p class="nt">Tesi magistrale — 30 ECTS · Primavera 2028</p>
+<p class="nb">Nessun orario fisso. Ricerca autonoma con il supervisore. Ambito ideale: tissue engineering · bioreattori · medicina rigenerativa · DTU Health Tech.</p>
+<p class="nb" style="margin-top:8px">Comincia a esplorare i gruppi di ricerca durante l'autunno 2027.</p>
+</div>
+</div>
+</div>
+
+<script>
+function st(id,btn){
+document.querySelectorAll('.sem').forEach(s=>s.classList.remove('show'));
+document.querySelectorAll('button').forEach(b=>b.classList.remove('on'));
+document.getElementById('tab-'+id).classList.add('show');
+btn.classList.add('on');
+}
+</script>
